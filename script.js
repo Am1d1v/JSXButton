@@ -1,8 +1,15 @@
 
 
+let BtnText = 'Click Here';
+
+const onBtnClick = () => {
+    BtnText = 'React Hello'
+    console.log(BtnText);
+};
+
 const App =   (
     <div className = "app">
-    <button onClick="">Click Me</button>
+    <button onClick={onBtnClick}>{BtnText}</button>
     </div>
   )
 
