@@ -6,11 +6,9 @@ const App = () => {
 
     console.log('Called');
 
-    let BtnText = 'Click Here';
-
+    let [BtnText, setBtnText] = React.useState('Click Here');
     const onBtnClick = () => {
-        BtnText = 'React Hello'
-        console.log(BtnText);
+        setBtnText('React Hello')
 };
 
     return (
