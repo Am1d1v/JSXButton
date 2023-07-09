@@ -4,11 +4,11 @@
 
 const App = () => {
 
-    console.log('Called');
-
     let [BtnText, setBtnText] = React.useState('Click Here');
+    console.log(BtnText);
+
     const onBtnClick = () => {
-        setBtnText('React Hello')
+        setBtnText(`React Hello ${Math.round(Math.random() * 100)}`)
 };
 
     return (
