@@ -2,10 +2,9 @@
 
 
 
-const App = () => {
-
-    const [BtnText, setBtnText] = React.useState('Click Here');
-    const [classesList, setClassesList] = React.useState('');
+const App = ({initialBtnText, initialClassesList}) => {
+    const [BtnText, setBtnText] = React.useState(initialBtnText);
+    const [classesList, setClassesList] = React.useState(initialClassesList);
 
 
     const onBtnClick = () => {
@@ -22,4 +21,4 @@ const App = () => {
 
 const container = document.getElementById('app');
 const root = ReactDOM.createRoot(container);
-root.render(<App />)
+root.render(<App initialBtnText="Click" initialClassesList =""/>)
