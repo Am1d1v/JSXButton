@@ -4,16 +4,18 @@
 
 const App = () => {
 
-    let [BtnText, setBtnText] = React.useState('Click Here');
-    console.log(BtnText);
+    const [BtnText, setBtnText] = React.useState('Click Here');
+    const [classesList, setClassesList] = React.useState('');
+
 
     const onBtnClick = () => {
-        setBtnText(`React Hello ${Math.round(Math.random() * 100)}`)
+        setBtnText('React Hello')
+        setClassesList('btn')
 };
 
     return (
-        <div className = "app">
-        <button onClick={onBtnClick}>{BtnText}</button>
+        <div className="app">
+        <button className={classesList} onClick={onBtnClick}>{BtnText}</button>
         </div>
       )
 }
